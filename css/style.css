@@ -13,7 +13,12 @@ body, html{
 	height: 100%;
 }
 
-#sidebar{
-
+#menu_widgets{
+  width: 228px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  
+  background-color: black;
 	
 }
