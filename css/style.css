@@ -1,3 +1,9 @@
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */;
+}
+
 body, html{
   margin: 0;
   border: 0;
@@ -6,6 +12,11 @@ body, html{
   font-family: 'Roboto', sans-serif;
   width: 1024px;
   height: 749px;
+}
+
+div{
+  margin: 0;
+  padding: 0;  
 }
 
 #container{
@@ -18,11 +29,22 @@ body, html{
   height: 100%;
   position: absolute;
   right: -228px;
-  
-  background-color: black;
-	
+}
+
+#menu_widgets_content{
+  width: 200px;
+  height: 35px;
+  background-color: black;  
 }
 
 button{
   height: 35px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: none;
+}
+
+#hamburger{
+  display: inline-block;
 }
