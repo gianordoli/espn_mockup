@@ -13,7 +13,25 @@ body, html{
 	height: 100%;
 }
 
-#sidebar{
-
-	
+.menu{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+}
+#menu_camera{
+  top: 80px;
+  left:30px;
+}
+#menu_widgets{
+  top: 30px;
+  right:30px;
+}
+#menu_score{
+  bottom: 30px;
+  left:30px;
+}
+#menu_chat{ 
+  bottom: 30px;
+  right:30px;
 }
