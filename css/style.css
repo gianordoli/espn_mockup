@@ -13,6 +13,12 @@ body, html{
   width: 1024px;
   height: 749px;
   text-align: left;
+  line-height: 0;
+  background: url(../img/penalty_kick.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /*-------- PUT ALL TAG SELECTORS HERE --------*/
@@ -20,8 +26,8 @@ body, html{
 div{  
   border: 0;
   margin: 0;
-  padding: 0;
-  background-color: red; 
+  padding: 0 0 0 0;
+  /*background-color: red; */
 }
 
 button{
@@ -47,6 +53,12 @@ img{
 
 /*------- PUT ALL CLASS SELECTORS HERE -------*/
 
+.menu_widgets_content{
+  width: 35px;
+  float: left;
+  display: inline-block;
+  vertical-align: top;  
+}
 
 /*--------------------------------------------*/
 
@@ -59,30 +71,15 @@ img{
 }
 
 #menu_widgets{
-  width: 290px;
+  width: 253px;
   /*width: 263px;*/
   height: 100%;
   position: absolute;
-  right: -228px;
+  right: -220px;
 }
 
 #menu_widgets button{
-  /*display: inline-block;*/
-  /*height: 35px;*/
-}
-
-.menu_widgets_content{
-  width: 35px;
-  /*background-color: rgba(100, 100, 100, 0.5);*/
-  float: left;
-  display: inline-block;
-  vertical-align: top;  
-}
-
-#menu_widgets_content button{
-  /*width: 228px;*/
   height: 35px;
-  /*background-color: green;*/
 }
 
 /*--------------------------------------------*/
