@@ -16,17 +16,29 @@ body, html{
 
 /*-------- PUT ALL TAG SELECTORS HERE --------*/
 
-div{
+div{  
+  border: 0;
   margin: 0;
-  padding: 0;  
+  padding: 0; 
+  vertical-align: top;
+  background-color: red; 
 }
 
 button{
-  height: 35px;
   margin: 0;
   border: 0;
   padding: 0;
+  background: none;
   outline: none;
+  display: inline-block;
+}
+
+p,
+br,
+img{
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
 /*--------------------------------------------*/
@@ -53,13 +65,9 @@ button{
 }
 
 #menu_widgets_content{
-  /*width: 200px;
-  height: 35px;*/
-  background-color: black;  
-}
-
-#hamburger{
-  display: inline-block;
+  width: 228px;
+  /*height: 35px;*/
+  /*background-color: black;*/
 }
 
 /*--------------------------------------------*/
