@@ -12,6 +12,7 @@ body, html{
   font-family: 'Roboto', sans-serif;
   width: 1024px;
   height: 749px;
+  text-align: left;
 }
 
 /*-------- PUT ALL TAG SELECTORS HERE --------*/
@@ -19,8 +20,7 @@ body, html{
 div{  
   border: 0;
   margin: 0;
-  padding: 0; 
-  vertical-align: top;
+  padding: 0;
   background-color: red; 
 }
 
@@ -28,6 +28,7 @@ button{
   margin: 0;
   border: 0;
   padding: 0;
+  text-align: left;
   background: none;
   outline: none;
   display: inline-block;
@@ -58,16 +59,30 @@ img{
 }
 
 #menu_widgets{
-  width: 263px;
+  width: 290px;
+  /*width: 263px;*/
   height: 100%;
   position: absolute;
   right: -228px;
 }
 
-#menu_widgets_content{
-  width: 228px;
+#menu_widgets button{
+  /*display: inline-block;*/
   /*height: 35px;*/
-  /*background-color: black;*/
+}
+
+.menu_widgets_content{
+  width: 35px;
+  /*background-color: rgba(100, 100, 100, 0.5);*/
+  float: left;
+  display: inline-block;
+  vertical-align: top;  
+}
+
+#menu_widgets_content button{
+  /*width: 228px;*/
+  height: 35px;
+  /*background-color: green;*/
 }
 
 /*--------------------------------------------*/
