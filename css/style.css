@@ -14,10 +14,31 @@ body, html{
   height: 749px;
 }
 
+/*-------- PUT ALL TAG SELECTORS HERE --------*/
+
 div{
   margin: 0;
   padding: 0;  
 }
+
+button{
+  height: 35px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: none;
+}
+
+/*--------------------------------------------*/
+
+
+/*------- PUT ALL CLASS SELECTORS HERE -------*/
+
+
+/*--------------------------------------------*/
+
+
+/*-------- PUT ALL ID SELECTORS HERE ---------*/
 
 #container{
 	width: 100%;
@@ -32,19 +53,13 @@ div{
 }
 
 #menu_widgets_content{
-  width: 200px;
-  height: 35px;
+  /*width: 200px;
+  height: 35px;*/
   background-color: black;  
-}
-
-button{
-  height: 35px;
-  margin: 0;
-  border: 0;
-  padding: 0;
-  outline: none;
 }
 
 #hamburger{
   display: inline-block;
 }
+
+/*--------------------------------------------*/
