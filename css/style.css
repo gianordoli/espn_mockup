@@ -14,11 +14,15 @@ body, html{
 }
 
 #menu_widgets{
-  width: 228px;
+  width: 263px;
   height: 100%;
   position: absolute;
-  right: 0;
+  right: -228px;
   
   background-color: black;
 	
+}
+
+button{
+  height: 35px;
 }
