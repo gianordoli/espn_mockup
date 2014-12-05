@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="58px" height="42px" viewBox="0 0 58 42" enable-background="new 0 0 58 42" xml:space="preserve">
+<g id="bg">
+</g>
+<g id="score_x2F_timeline">
+</g>
+<g id="camera">
+</g>
+<g id="menu">
+	<path id="bar_chart_6_icon_1_" fill="#FFFFFF" d="M32.886,9.425l1.164,1.163l-0.595,0.58L32.287,10L32.886,9.425z M31.785,10.482
+		l-0.614,0.592l1.176,1.177l0.61-0.597L31.785,10.482z M22.26,22.102h3.728v-3.618H22.26V22.102z M32.729,8.282l2.442,2.444
+		l0.569-2.965L32.729,8.282z M31.907,22.102h3.764v-7.673h-3.764V22.102z M31.847,12.737l-1.181-1.18l-1.892,1.819l-1.666-1.575
+		l-4.665,4.647l1.148,1.129l3.47-3.469l1.718,1.625L31.847,12.737z M27.083,22.102h3.766v-5.335h-3.766V22.102z"/>
+</g>
+<g id="chat">
+</g>
+<g id="logo" display="none">
+</g>
+<text transform="matrix(1 0 0 1 15.1636 35.8164)" fill="#FFFFFF" font-family="'Roboto-Regular'" font-size="12">Stats</text>
+</svg>

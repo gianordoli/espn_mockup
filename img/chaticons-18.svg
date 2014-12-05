@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="35.008px" height="30.5px" viewBox="0 0 35.008 30.5" enable-background="new 0 0 35.008 30.5" xml:space="preserve">
+<g id="bg">
+</g>
+<g id="score_x2F_timeline">
+</g>
+<g id="camera">
+</g>
+<g id="menu">
+	<g>
+		<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M16.569,10.317h-5.703
+			c-0.598,0-1.083,0.579-1.083,1.293v8.941c0,0.714,0.485,1.293,1.083,1.293h9.498c0.598,0,1.083-0.579,1.083-1.293V15.52"/>
+		<g>
+			<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M14.426,18.282
+				c0,0,1.583-6.167,6.501-6.632"/>
+			<g>
+				<path fill="#FFFFFF" d="M21.007,14.03c-0.476,0.276-0.866,0.051-0.867-0.499l-0.002-0.938c-0.001-0.55-0.002-1.45-0.003-2
+					l-0.002-0.938c-0.001-0.55,0.388-0.776,0.865-0.501l0.813,0.468c0.477,0.274,1.257,0.723,1.734,0.997l0.813,0.468
+					c0.477,0.274,0.477,0.724,0.002,1l-0.812,0.47c-0.476,0.276-1.255,0.727-1.73,1.003L21.007,14.03z"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="chat">
+</g>
+<g id="logo" display="none">
+</g>
+</svg>

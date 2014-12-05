@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="42.333px" height="33.5px" viewBox="0 0 42.333 33.5" enable-background="new 0 0 42.333 33.5" xml:space="preserve">
+<g id="bg">
+</g>
+<g id="score_x2F_timeline">
+</g>
+<g id="camera">
+</g>
+<g id="menu">
+	<circle fill="#FFFFFF" cx="11.552" cy="12.722" r="2.465"/>
+	<path fill="#FFFFFF" d="M6.931,19.264c0,0,0.167-2.247,4.866-2.514c0,5.109,0,5.109,0,5.109S9.019,22.102,6.931,19.264z"/>
+	<path fill="#FFFFFF" d="M16.662,19.264c0,0-0.167-2.247-4.866-2.514c0,5.109,0,5.109,0,5.109S14.574,22.102,16.662,19.264z"/>
+	<circle fill="#FFFFFF" cx="19.219" cy="11.1" r="2.465"/>
+	<path fill="#FFFFFF" d="M14.597,17.642c0,0,0.167-2.247,4.866-2.514c0,5.109,0,5.109,0,5.109S16.686,20.48,14.597,17.642z"/>
+	<path fill="#FFFFFF" d="M24.329,17.642c0,0-0.167-2.247-4.866-2.514c0,5.109,0,5.109,0,5.109S22.24,20.48,24.329,17.642z"/>
+	<circle fill="#FFFFFF" cx="25.885" cy="12.722" r="2.465"/>
+	<path fill="#FFFFFF" d="M21.264,19.264c0,0,0.167-2.247,4.866-2.514c0,5.109,0,5.109,0,5.109S23.353,22.102,21.264,19.264z"/>
+	<path fill="#FFFFFF" d="M30.995,19.264c0,0-0.167-2.247-4.866-2.514c0,5.109,0,5.109,0,5.109S28.907,22.102,30.995,19.264z"/>
+</g>
+<g id="chat">
+</g>
+<g id="logo" display="none">
+</g>
+</svg>
