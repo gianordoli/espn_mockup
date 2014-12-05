@@ -12,6 +12,7 @@ body, html{
   font-family: 'Roboto', sans-serif;
   width: 1024px;
   height: 749px;
+  font-size: 8px;
   text-align: left;
   line-height: 0;
   background: url(../img/penalty_kick.png) no-repeat center center fixed; 
@@ -22,7 +23,6 @@ body, html{
 }
 
 /*-------- PUT ALL TAG SELECTORS HERE --------*/
-
 div{  
   border: 0;
   margin: 0;
@@ -48,38 +48,80 @@ img{
   padding: 0;
 }
 
-/*--------------------------------------------*/
-
-
-/*------- PUT ALL CLASS SELECTORS HERE -------*/
-
-.menu_widgets_content{
-  width: 35px;
-  float: left;
-  display: inline-block;
-  vertical-align: top;  
-}
-
-/*--------------------------------------------*/
-
-
-/*-------- PUT ALL ID SELECTORS HERE ---------*/
-
 #container{
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
+}
+/*--------------------------------------------*/
+
+
+/*-------------- BUTTON CLASSES --------------*/
+.main_button{
+  color: white;
+  background: hsla(0, 0%, 100%, 0.5);
 }
 
+.menu_button{
+  color: white;
+  background: hsla(0, 0%, 0%, 0.5);
+}
+/*--------------------------------------------*/
+
+
+/*--------------- WIDGETS MENU ---------------*/
 #menu_widgets{
-  width: 253px;
+  width: 280px;
   /*width: 263px;*/
   height: 100%;
   position: absolute;
   right: -220px;
 }
 
-#menu_widgets button{
-  height: 35px;
+#hamburger{
+  width: 42px;
+  height: 100%;
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  background: hsla(0, 0%, 100%, 0.5);
 }
+
+#menu_widgets_navbar{
+  width: 232px;
+  height: 42px;
+  display: inline-block;
+}
+
+#menu_widgets_navbar a{
+  margin: 0;
+  border: 0;
+  padding: 0;  
+  width: 25%;
+  height: 42px;
+  text-align: center;
+  float: left;
+  display: inline-block;
+  vertical-align: top;    
+  background: hsla(0, 0%, 0%, 0.5);
+}
+
+#menu_widgets_content{
+  width: 232px;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;  
+  background: hsla(0, 0%, 0%, 0.5);
+}
+/*--------------------------------------------*/
+
+
+
+/*--------------- CAMERA MENU ----------------*/
+
+/*--------------------------------------------*/
+
+
+
+/*----------------- TIMELINE -----------------*/
 
 /*--------------------------------------------*/
