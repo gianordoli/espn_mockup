@@ -1,3 +1,9 @@
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */;
+}
+
 body, html{
   margin: 0;
   border: 0;
@@ -6,32 +12,127 @@ body, html{
   font-family: 'Roboto', sans-serif;
   width: 1024px;
   height: 749px;
+  text-align: left;
+  line-height: 0;
+  background: url(../img/penalty_kick.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+/*-------- PUT ALL TAG SELECTORS HERE --------*/
+
+div{  
+  border: 0;
+  margin: 0;
+  padding: 0 0 0 0;
+  /*background-color: red; */
+}
+
+button{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  background: none;
+  outline: none;
+  display: inline-block;
+}
+
+p,
+br,
+img{
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+/*--------------------------------------------*/
+
+
+/*------- PUT ALL CLASS SELECTORS HERE -------*/
+
+.menu_widgets_content{
+  width: 35px;
+  float: left;
+  display: inline-block;
+  vertical-align: top;  
+}
+
+/*--------------------------------------------*/
+
+
+/*-------- PUT ALL ID SELECTORS HERE ---------*/
 
 #container{
 	width: 100%;
 	height: 100%;
 }
 
-.menu{
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  background-color: black;
-}
-#menu_camera{
-  top: 80px;
-  left:30px;
-}
 #menu_widgets{
-  top: 30px;
-  right:30px;
+  width: 253px;
+  /*width: 263px;*/
+  height: 100%;
+  position: absolute;
+  right: 30px;
 }
+
+#menu_widgets button{
+  height: 35px;
+}
+
+
+/*--------------------------------------------*/
+
+/*--- Timeline ---*/
+
 #menu_score{
-  bottom: 30px;
-  left:30px;
+  width: 249px;
+  height: 88px;
+  background: url("../img/timeline1.png") top left no-repeat;
+  position: absolute;
+  left: 30px;
+  top: 631px;
 }
-#menu_chat{ 
-  bottom: 30px;
-  right:30px;
+
+#timeline_open{
+  width: 23px;
+  height: 14px;
+  margin: 0px 0 0 226px;
+  background: url("../img/timeline6.png") top right no-repeat;   
+}
+
+#menu_timeline{
+  width: 0px;
+  /*width: 645px;*/
+  height: 89px;
+  background: url("../img/timeline2.png") top right no-repeat; 
+  position: absolute;
+  left: 289px;
+  top: 631px; 
+}
+.width{
+  width: 160px;
+}
+#comment_espn_open{
+  width: 0px;
+  /*width: 160px*/
+  height: 16px;
+  margin: 36px 0px 0px 0px;
+}
+#comment_public_open{
+  width: 0px;
+  height: 25px;
+  margin: 3px 0px 0px 0px;
+}
+#comment_public{
+  position: absolute;
+  left: -400px;
+  top: 501px; 
+}
+#comment_espn{
+  position: absolute;
+  left: -400px;
+  top: 501px; 
 }
