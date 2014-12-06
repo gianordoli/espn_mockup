@@ -14,11 +14,14 @@ $(document).ready(function () {
     // Sidebar
 	$('#hamburger').bind('mouseup', function(event){
 		var right = ($(window).width() - ($('#menu_widgets').offset().left + $('#menu_widgets').width()));
-		console.log(right);
+		// console.log(right);
+		console.log($('#chat'));
 		if(right == 0){
-			$('#menu_widgets').animate({right: -$('#menu_widgets').width() + $('#hamburger').width()}, 500, 'swing');		
+			$('#menu_widgets').animate({right: -$('#menu_widgets').width() + $('#hamburger').width()}, 500, 'swing');
+			$('#chat').animate({right: 10}, 500);
 		}else{
-			$('#menu_widgets').animate({right: 0}, 500);		
+			$('#menu_widgets').animate({right: 0}, 500);
+			$('#chat').animate({right: $('#menu_widgets').width() + 10}, 500);
 		}
 	});
 
