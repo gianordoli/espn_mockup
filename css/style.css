@@ -1,3 +1,9 @@
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */;
+}
+
 body, html{
   margin: 0;
   border: 0;
@@ -6,14 +12,128 @@ body, html{
   font-family: 'Roboto', sans-serif;
   width: 1024px;
   height: 749px;
+  font-size: 8px;
+  text-align: left;
+  line-height: 0;
+  background: url(../img/penalty_kick.png) no-repeat left top; 
+  /*background: url(../img/penalty_kick.png) no-repeat center center fixed; */
+  /*-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+  overflow: hidden;
+}
+
+/*-------- PUT ALL TAG SELECTORS HERE --------*/
+div{  
+  border: 0;
+  margin: 0;
+  padding: 0 0 0 0;
+  /*background-color: red; */
+}
+
+button{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  background: none;
+  outline: none;
+  display: inline-block;
+}
+
+p,
+br,
+img{
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
 #container{
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /*overflow: hidden;*/
+}
+/*--------------------------------------------*/
+
+
+/*--------------- WIDGETS MENU ---------------*/
+#menu_widgets{
+  width: 277px;
+  /*width: 263px;*/
+  height: 100%;
+  position: absolute;
+  right: -235px;
 }
 
-#sidebar{
+#hamburger{
+  width: 42px;
+  height: 100%;
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+}
 
-	
+#menu_widgets_navbar{
+  width: 235px;
+  height: 42px;
+  display: inline-block;
+}
+
+#menu_widgets_navbar a{
+  margin: 0;
+  border: 0;
+  padding: 0;  
+  width: 25%;
+  height: 42px;
+  text-align: center;
+  float: left;
+  display: inline-block;
+  vertical-align: top;    
+  background: hsla(0, 0%, 0%, 0.2);
+}
+
+#menu_widgets_navbar a.selected,
+#menu_widgets_navbar a:hover{  
+  background: hsla(0, 0%, 0%, 0.75);
+}
+
+#menu_widgets_content{
+  width: 235px;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;  
+  background: hsla(0, 0%, 0%, 0.75);
+  overflow: scroll;
+}
+/*--------------------------------------------*/
+
+
+/*------------------ CHAT --------------------*/
+#chat{
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
+/*--------------------------------------------*/
+
+
+
+/*--------------- CAMERA MENU ----------------*/
+
+/*--------------------------------------------*/
+
+
+
+/*----------------- TIMELINE -----------------*/
+
+/*--------------------------------------------*/
+
+.draggable{
+  background-color: rgba(0, 0%, 0%, 0.75);
 }

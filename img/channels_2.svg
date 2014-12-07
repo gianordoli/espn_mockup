@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="238px"
+	 height="188px" viewBox="0 0 238 188" enable-background="new 0 0 238 188" xml:space="preserve">
+<g id="bg">
+</g>
+<g id="score_x2F_timeline">
+</g>
+<g id="camera">
+</g>
+<g id="menu">
+	<rect x="0.399" y="0.491" opacity="0.48" fill="#343433" width="237.833" height="187.789"/>
+	<rect opacity="0.62" fill="#13130F" width="81" height="28"/>
+	<rect y="28" opacity="0.62" fill="#13130F" width="238" height="27"/>
+	<g>
+		<g>
+			<text transform="matrix(1 0 0 1 12.748 17.2227)" fill="#FFFFFF" font-family="'RobotoCondensed-Regular'" font-size="10.4312">Broadcasters</text>
+		</g>
+	</g>
+	<g>
+		<g>
+			<text transform="matrix(1 0 0 1 96.6543 17.4336)" fill="#989897" font-family="'RobotoCondensed-Regular'" font-size="10.4312">Me</text>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path fill="#FFFFFF" d="M183.5,41.5c0,1.381-1.119,2.5-2.5,2.5l0,0c-1.381,0-2.5-1.119-2.5-2.5v-4c0-1.381,1.119-2.5,2.5-2.5l0,0
+				c1.381,0,2.5,1.119,2.5,2.5V41.5z"/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M177,39v2.597c0,2.362,1.637,4.285,4,4.285
+				s4-1.923,4-4.285V39"/>
+			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="181" y1="46" x2="181" y2="50"/>
+			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="179" y1="50" x2="183" y2="50"/>
+		</g>
+		<g>
+			<rect x="195.59" y="40.096" fill="#FFFFFF" width="10.294" height="7.714"/>
+			<polygon fill="#FFFFFF" points="211.027,41.293 205.884,42.579 205.884,45.15 211.027,46.437 			"/>
+		</g>
+	</g>
+	<g>
+		
+			<line fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" x1="219.365" y1="49.981" x2="231.365" y2="37.981"/>
+		
+			<line fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-miterlimit="10" x1="231.365" y1="49.981" x2="219.365" y2="37.981"/>
+	</g>
+</g>
+<g id="chat">
+</g>
+<g id="logo" display="none">
+</g>
+<g id="Layer_7">
+</g>
+<g id="Layer_8">
+</g>
+<g id="Layer_9">
+</g>
+<g id="Layer_10">
+</g>
+<g id="Layer_11">
+</g>
+</svg>
