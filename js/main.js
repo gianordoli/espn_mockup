@@ -29,16 +29,13 @@ $(document).ready(function () {
 
     // Sidebar
 	$('#hamburger').bind('mouseup', function(event){
-		// console.log($('#container').width());
-		// console.log($(window).width());
-		// console.log($('#menu_widgets').css('right'));
-		// var right = $('#menu_widgets').css('right');
-		// right = (right.substring(0, right.length - 2))*1;
-		// console.log(right);
-		if($('#container').offset().left == 0){
-			$('#container').animate({left: $('#menu_widgets_content').width()}, 500);	
+
+		if($('#menu_widgets').offset().left == 747){
+			$('#menu_widgets').animate({left: 747 + $('#menu_widgets_content').width()}, 500);	
+			$('#chat').animate({left: 549 + $('#menu_widgets_content').width()}, 500);
 		}else{
-			$('#container').animate({left: 0}, 500);
+			$('#menu_widgets').animate({left: 747}, 500);
+			$('#chat').animate({left: 549}, 500);	
 		}
 	});
 
