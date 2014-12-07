@@ -55,7 +55,8 @@ $(document).ready(function () {
 
 	// Chat widgets
 	var chat_index = 0;	
-	$('#chat').bind('mousedrag', function(event){
+	$('#chat').bind('mouseup', function(event){
+		console.log('hey');
 		var myId = $(this).attr('id');
 		chat_index = increaseSteps(chat_index, 8, function(i){});
 		var myImg = $('<img src="img/' + myId + '_' + chat_index + '.svg"/>');
