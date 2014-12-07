@@ -56,6 +56,7 @@ img{
   top: 0;
   width: 100%;
   height: 100%;
+  z-index: 5;
   /*overflow: hidden;*/
 }
 /*--------------------------------------------*/
@@ -140,7 +141,16 @@ img{
 
 /*--- Timeline ---*/
 
+#movie{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
 #menu_score{
+  z-index: 10;
+
   width: 249px;
   height: 88px;
   background: url("../img/timeline1.png") top left no-repeat;
@@ -150,6 +160,9 @@ img{
 }
 
 #menu_timelineclosed{
+
+  z-index: 20;
+
   width: 70px;
   height: 90px;
   background: url("../img/timeline7.png") top right no-repeat; 
@@ -158,6 +171,9 @@ img{
   top: 631px; 
 }
 #timeline_open{
+
+  z-index: 30;
+
   width: 23px;
   height: 14px;
   margin: 0 0 0 47px;
@@ -165,6 +181,9 @@ img{
 }
 
 #menu_timeline{
+
+  z-index: 40;
+
   width: 0px;
   /*width: 645px;*/
   height: 89px;
@@ -177,12 +196,18 @@ img{
   width: 160px;
 }
 #comments_open{
+  
+  z-index: 50;
+
   width: 0px;
   /*width: 160px*/
   height: 44px;
   margin: 36px 0px 0px 0px;
 }
 #comment_bubble{
+
+  z-index: 60;
+
   position: absolute;
   left: -400px;
   top: 501px; 
@@ -191,6 +216,9 @@ img{
 /*  z-index: -1;
 */}
 #replay{
+
+  z-index: 70;
+
   width: 108px;
   height: 108px;
   }

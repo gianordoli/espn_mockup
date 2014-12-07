@@ -113,7 +113,8 @@ $(document).ready(function () {
 							.css({
 								'position': 'absolute',
 								'left': x,
-								'top': y
+								'top': y,
+								'z-index': 100
 							});
 			$(newWidget).append(img);
 			$(newWidget).bind('mousedown touchstart', function(event){
