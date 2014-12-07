@@ -1,7 +1,10 @@
 $(document).ready(function () {
 
 	// Toggle video controls
-	$('video').bind('play', function(){
+	// Need to disable them when video is playing,
+	// otherwise all clickable elements are disabled on te iPad
+
+	function toggleVideoControls(){
 		console.log('hey');
 	  if ($("video:visible")) {
 	    if ($("video").prop("controls")) {
@@ -9,25 +12,23 @@ $(document).ready(function () {
 	    } else {
 	      $("video").prop("controls", true)
 	    }  
-	  }
-	});
+	  }		
+	}
+	$('video').bind('play', toggleVideoControls);
 
 
 	// CSS navigation
-    $('a.button').bind('mouseup touchend', function(event){
+    $('a.button').bind('mouseup', function(event){
     	var widgets = $('a.button');
     	$.each(widgets, function(){
 			$(this).removeClass('selected');
     	});
         $(this).addClass('selected');
-
-
-
     });
 
 
     // Sidebar
-	$('#hamburger').bind('mouseup touchend', function(event){
+	$('#hamburger').bind('mouseup', function(event){
 		// console.log($('#container').width());
 		// console.log($(window).width());
 		// console.log($('#menu_widgets').css('right'));
@@ -43,7 +44,7 @@ $(document).ready(function () {
 
 
 	// Sidebar widgets: channels
-	$('#channels').bind('mouseup touchend', function(event){
+	$('#channels').bind('mouseup', function(event){
 		var myId = $(this).attr('id');
 		var img_index = 0;
 
@@ -70,12 +71,12 @@ $(document).ready(function () {
 	});	
 
 	// Sidebar widgets: fantasy
-	$('#fantasy').bind('mouseup touchend', function(event){
+	$('#fantasy').bind('mouseup', function(event){
 		var myId = $(this).attr('id');
 		var img_index = 0;
 
     	var myImg = $('<img src="img/' + myId + '_' + img_index + '.png"/>')
-    				.bind('mouseup touchend', function(){
+    				.bind('mouseup', function(){
 
     					// increase step
     					// (image_index, max #steps before callback, and callback)
@@ -90,12 +91,12 @@ $(document).ready(function () {
 	});
 
 	// Sidebar widgets: views
-	$('#views').bind('mouseup touchend', function(event){
+	$('#views').bind('mouseup', function(event){
 		var myId = $(this).attr('id');
 		var img_index = 0;
 
     	var myImg = $('<img src="img/' + myId + '_' + img_index + '.png"/>')
-    				.bind('mouseup touchend', function(){
+    				.bind('mouseup', function(){
 
     					// increase step
     					// (image_index, max #steps before callback, and callback)
@@ -111,7 +112,7 @@ $(document).ready(function () {
 
 	// Chat
 	var chat_index = 0;	
-	$('#chat').bind('mouseup touchend', function(event){
+	$('#chat').bind('mouseup', function(event){
 		// console.log('hey');
 		var myId = $(this).attr('id');
 		chat_index = increaseSteps(chat_index, 8, function(i){});
@@ -133,7 +134,7 @@ $(document).ready(function () {
 								'z-index': 100
 							});
 			$(newWidget).append(img);
-			$(newWidget).bind('mousedown touchstart', function(event){
+			$(newWidget).bind('mousedown', function(event){
 				event.preventDefault();
 				// console.log('x: ' + $(this).offset().left + ', y: ' + $(this).offset().top);
 				// console.log('x: ' + event.pageX + ', y: ' + event.pageY);
@@ -153,7 +154,7 @@ $(document).ready(function () {
 					draggedObj = this;
 				}
 			});
-			$(newWidget).bind('mouseup touchend', function(event){
+			$(newWidget).bind('mouseup', function(event){
 				// console.log($(this).attr('id'));
 				if($(draggedObj).attr('id') == $(this).attr('id')){
 					draggedObj = '';	
@@ -173,11 +174,11 @@ $(document).ready(function () {
 				}
 			});			
 
-			$('body').append(newWidget);			
+			$('#container').append(newWidget);			
 		}
 	}
 
-	$('body').bind('mousemove touchmove', function(event){
+	$('body').bind('mousemove', function(event){
 		event.preventDefault();
 		if(draggedObj != ''){
 			$(draggedObj).css({
@@ -199,7 +200,7 @@ $(document).ready(function () {
 
 	$('#timeline_open').bind('mouseup', function(event){
 		var width = ($('#menu_timeline').width());
-		console.log(width);
+		// console.log(width);
 		if(width == 0){
 			$('#menu_timeline').animate({width: 645}, 1000, 'swing');		
 			$('#comment_espn_open').css({'width':'160'});
@@ -235,7 +236,11 @@ $(document).ready(function () {
 
 	//THIS DOESN'T PLAY ON THE IPAD
 	$('#replay').bind('mouseup', function(event){
-		$('#webkit_movie_wrapper').replaceWith('<div id="webkit_movie_wrapper"><video  width="1332" height="749" preload="auto" controls="controls" autoplay="true" loop="loop" src="videos/video2_1.mp4"></video>');
+		var newVideo = $('<video width="1332" height="749" preload="auto" controls="controls" autoplay="true" loop="loop" src="videos/video2_1.mp4"></video>');
+		$(newVideo).bind('play', toggleVideoControls);
+
+		$('#webkit_movie_wrapper').empty();
+		$('#webkit_movie_wrapper').append(newVideo);
 	});	
 
  
