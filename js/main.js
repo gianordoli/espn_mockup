@@ -50,7 +50,7 @@ $(document).ready(function () {
 
 	//THIS DOESN'T PLAY ON THE IPAD
 	$('#replay').bind('mouseup', function(event){
-		$('#video_background').replaceWith('<video id="video_background" preload="auto" autoplay="true" loop="loop" volume="0"><source id="replaced_video" src="videos/video2.mp4" type="video/mp4">Video not supported </video>');
+		$('#webkit_movie_wrapper').replaceWith('<div id="webkit_movie_wrapper"><video height="749" preload="auto" controls="controls" autoplay="true" loop="loop" src="videos/video2_1.mp4"></video>');
 	});
 
 
