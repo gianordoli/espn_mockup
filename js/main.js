@@ -120,8 +120,6 @@ $(document).ready(function () {
         $(this).html(myImg);
 	});	
 
-	var draggedObj = '';
-	var dragOffset;
 
 	function createDraggableWidget(x, y, id, img){
 		// If a window with this id hasn't been created yet...
@@ -133,60 +131,48 @@ $(document).ready(function () {
 								'top': y,
 								'z-index': 100
 							});
-			$(newWidget).append(img);
-			$(newWidget).bind('mousedown', function(event){
-				event.preventDefault();
-				// console.log('x: ' + $(this).offset().left + ', y: ' + $(this).offset().top);
-				// console.log('x: ' + event.pageX + ', y: ' + event.pageY);
-				dragOffset = {
+
+
+			$(img).bind('mouseup', function(event){
+				// console.log('mouseup');
+
+				var clickOffset = {
 					x: event.pageX - $(this).offset().left,
 					y: event.pageY - $(this).offset().top
-				}	
-
-				// Close
-				if(210 < dragOffset.x && dragOffset.x < $(this).width() &&
-				   0 < dragOffset.y && dragOffset.y < 80){
-					// console.log('close');
-					$(this).remove();
-
-				// Start dragging
-				}else if(0 < dragOffset.y && dragOffset.y < 40){
-					draggedObj = this;
 				}
-			});
-			$(newWidget).bind('mouseup', function(event){
-				// console.log($(this).attr('id'));
-				if($(draggedObj).attr('id') == $(this).attr('id')){
-					draggedObj = '';	
-				}else{
-					var currSrc = $(this).children('img').attr('src');
-					var currIndex = currSrc.charAt(currSrc.lastIndexOf('_') + 1);
-					console.log(currIndex);
-					var newSrc = currSrc;
-					if(currIndex == '2'){
-						// console.log('hey');
-						newSrc = currSrc.replace('2', '3');
-					}else if(currIndex == '3'){
-						newSrc = currSrc.replace('3', '2');
+
+				if(0 < clickOffset.y && clickOffset.y < 80){
+
+					//Close
+					if(210 < clickOffset.x && clickOffset.x < $(this).width()){
+						// console.log('close');
+						$(this).parent().remove();
+
+					// No camera
+					}else if(150 < clickOffset.x && clickOffset.x < 210){	
+					console.log('camera');				
+						var currSrc = $(this).attr('src');
+						var currIndex = currSrc.charAt(currSrc.lastIndexOf('_') + 1);
+						console.log(currIndex);
+						var newSrc = currSrc;
+						if(currIndex == '2'){
+							// console.log('hey');
+							newSrc = currSrc.replace('2', '3');
+						}else if(currIndex == '3'){
+							newSrc = currSrc.replace('3', '2');
+						}
+						console.log(newSrc);
+						console.log($(this).attr('src', newSrc));
 					}
-					console.log(newSrc);
-					console.log($(this).children('img').attr('src', newSrc));
-				}
-			});			
 
+				}
+
+			});			
+			$(newWidget).append(img);
+			$(newWidget).draggable();
 			$('#container').append(newWidget);			
 		}
 	}
-
-	$('body').bind('mousemove', function(event){
-		event.preventDefault();
-		if(draggedObj != ''){
-			$(draggedObj).css({
-				'left': event.pageX - dragOffset.x,
-				'top': event.pageY - dragOffset.y
-			});			
-		}
-	});
 
 	function increaseSteps(index, max, callback){
 		index ++;
