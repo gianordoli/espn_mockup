@@ -26,7 +26,7 @@ $(document).ready(function () {
 	});
 
 
-	// Sidebar widgets
+	// Sidebar widgets: channels
 	$('#channels').bind('mouseup', function(event){
 		var myId = $(this).attr('id');
 		var img_index = 0;
@@ -52,6 +52,26 @@ $(document).ready(function () {
     	// Replaces the content of the sidebar with the new img
         $('#menu_widgets_content').html(myImg);
 	});	
+
+	// Sidebar widgets: fantasy
+	$('#fantasy').bind('mouseup', function(event){
+		var myId = $(this).attr('id');
+		var img_index = 0;
+
+    	var myImg = $('<img src="img/' + myId + '_' + img_index + '.svg"/>')
+    				.bind('mouseup', function(){
+
+    					// increase step
+    					// (image_index, max #steps before callback, and callback)
+    					img_index = increaseSteps(img_index, 3, function(i){});
+
+    					//Replaces the image with the next one
+    					$(this).attr('src', 'img/' + myId + '_' + img_index + '.svg');
+    				});
+
+    	// Replaces the content of the sidebar with the new img
+        $('#menu_widgets_content').html(myImg);
+	});
 
 	// Chat widgets
 	var chat_index = 0;	
