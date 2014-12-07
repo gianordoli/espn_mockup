@@ -43,7 +43,7 @@ $(document).ready(function () {
 		var myId = $(this).attr('id');
 		var img_index = 0;
 
-    	var myImg = $('<img src="img/' + myId + '_' + img_index + '.svg"/>')
+    	var myImg = $('<img src="img/' + myId + '_' + img_index + '.png"/>')
     				.bind('mouseup', function(){
 
     					// increase step
@@ -51,14 +51,14 @@ $(document).ready(function () {
     					img_index = increaseSteps(img_index, 1, function(i){
 
     						// Creates image
-    						var windowImg = $('<img src="img/' + myId + '_' + i + '.svg"/>');
+    						var windowImg = $('<img src="img/' + myId + '_' + i + '.png"/>');
     						
     						// Creates window (x, y, w, h, id, img)
     						createDraggableWidget(800, 400, myId + '_widget', windowImg);
     					});
 
     					//Replaces the image with the next one
-    					$(this).attr('src', 'img/' + myId + '_' + img_index + '.svg');
+    					$(this).attr('src', 'img/' + myId + '_' + img_index + '.png');
     				});
 
     	// Replaces the content of the sidebar with the new img
@@ -70,7 +70,7 @@ $(document).ready(function () {
 		var myId = $(this).attr('id');
 		var img_index = 0;
 
-    	var myImg = $('<img src="img/' + myId + '_' + img_index + '.svg"/>')
+    	var myImg = $('<img src="img/' + myId + '_' + img_index + '.png"/>')
     				.bind('mouseup', function(){
 
     					// increase step
@@ -78,7 +78,7 @@ $(document).ready(function () {
     					img_index = increaseSteps(img_index, 3, function(i){});
 
     					//Replaces the image with the next one
-    					$(this).attr('src', 'img/' + myId + '_' + img_index + '.svg');
+    					$(this).attr('src', 'img/' + myId + '_' + img_index + '.png');
     				});
 
     	// Replaces the content of the sidebar with the new img
@@ -90,7 +90,7 @@ $(document).ready(function () {
 		var myId = $(this).attr('id');
 		var img_index = 0;
 
-    	var myImg = $('<img src="img/' + myId + '_' + img_index + '.svg"/>')
+    	var myImg = $('<img src="img/' + myId + '_' + img_index + '.png"/>')
     				.bind('mouseup', function(){
 
     					// increase step
@@ -98,7 +98,7 @@ $(document).ready(function () {
     					img_index = increaseSteps(img_index, 1, function(i){});
 
     					//Replaces the image with the next one
-    					$(this).attr('src', 'img/' + myId + '_' + img_index + '.svg');
+    					$(this).attr('src', 'img/' + myId + '_' + img_index + '.png');
     				});
 
     	// Replaces the content of the sidebar with the new img
@@ -111,7 +111,7 @@ $(document).ready(function () {
 		console.log('hey');
 		var myId = $(this).attr('id');
 		chat_index = increaseSteps(chat_index, 8, function(i){});
-		var myImg = $('<img src="img/' + myId + '_' + chat_index + '.svg"/>');
+		var myImg = $('<img src="img/' + myId + '_' + chat_index + '.png"/>');
         $(this).html(myImg);
 	});	
 
