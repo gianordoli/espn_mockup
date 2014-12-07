@@ -19,36 +19,41 @@ $(document).ready(function () {
 			$('#menu_timeline').animate({width: 645}, 1000, 'swing');		
 			$('#comment_espn_open').css({'width':'160'});
 			$('#comment_public_open').css({'width':'160'});
+			$('#comments_open').css({'width':'160'});
 			$('#timeline_open').css({'background':'url("img/timeline5.png") top right no-repeat'});		
 		}else{
 			$('#menu_timeline').animate({width: 0}, 1000);		
 			$('#comment_espn').css({'left':'-400'});
 			$('#comment_espn_open').css({'width':'0'});
 			$('#comment_public_open').css({'width':'0'});
+			$('#comments_open').css({'width':'0'});
 			$('#timeline_open').css({'background':'url("img/timeline6.png") top right no-repeat'});		
 		}
 
 	});
 
-	$('#comment_espn_open').bind('mouseup', function(event){
-		var open = ($('#menu_timeline').width());
+	$('#comments_open').bind('mouseup', function(event){
+		var open = ($('#comments_open').width());
 		var xPos = event.pageX-54;
-		$('#comment_public').css({'left':'-400px'});
+		$('#comment_bubble').css({'left':'-400px'});
 		if(open != 0){
-			$('#comment_espn').css({'left':xPos}).fadeIn(100).delay(1200).fadeOut(400);
+			$('#comment_bubble').css({'left':xPos}).fadeIn(100).delay(1200).fadeOut(400);
+			//if we are clicking in the higher row => ESPN comments background
+			if(event.pageY < 685){
+				$('#comment_bubble').css({'background':'URL("img/timeline4.png") top left no-repeat'});
+			}else{
+				$('#comment_bubble').css({'background':'URL("img/timeline3.png") top left no-repeat'});
+				//$('#comment_bubble').css({'background':'URL("img/timeline3.png") top left no-repeat'}).fadeIn(100).delay(3000).fadeOut(400);
+			}
 		}
 	});
 
-	$('#comment_public_open').bind('mouseup', function(event){
-		var open = ($('#menu_timeline').width());
-		var xPos = event.pageX-54;
-		$('#comment_espn').css({'left':'-400px'});
-		if(open != 0){
-			$('#comment_public').css({'left':xPos}).fadeIn(100).delay(1200).fadeOut(400);
-		}
+	//THIS DOESN'T PLAY ON THE IPAD
+	$('#replay').bind('mouseup', function(event){
+		$('#video_background').replaceWith('<video id="video_background" preload="auto" autoplay="true" loop="loop" volume="0"><source id="replaced_video" src="videos/video2.mp4" type="video/mp4">Video not supported </video>');
 	});
 
 
 
  
-});
+})
