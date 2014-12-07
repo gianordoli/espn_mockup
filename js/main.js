@@ -1,8 +1,7 @@
 $(document).ready(function () {
 
-
 	// CSS navigation
-    $('a.button').bind('mouseup', function(event){
+    $('a.button').bind('mouseup touchend', function(event){
     	var widgets = $('a.button');
     	$.each(widgets, function(){
 			$(this).removeClass('selected');
@@ -12,7 +11,7 @@ $(document).ready(function () {
 
 
     // Sidebar
-	$('#hamburger').bind('mouseup', function(event){
+	$('#hamburger').bind('mouseup touchend', function(event){
 		// console.log($('#container').width());
 		// console.log($(window).width());
 		console.log($('#menu_widgets').css('right'));
@@ -24,22 +23,11 @@ $(document).ready(function () {
 		}else{
 			$('#container').animate({left: - $('#menu_widgets_content').width()}, 500);	
 		}
-		
-		// var right = ($(window).width() - ($('#menu_widgets').offset().left + $('#menu_widgets').width()));
-		// var right = - ($('#menu_widgets').offset().left + $('#menu_widgets').width()));
-		// console.log(right);
-		// if(right == 0){
-			// $('#container').animate({right: -$('#menu_widgets').width() + $('#hamburger').width()}, 500);
-			// $('#chat').animate({right: 10}, 500);
-		// }else{
-		// 	$('#container').animate({right: 0}, 500);
-			// $('#chat').animate({right: $('#menu_widgets').width() + 10}, 500);
-		// }
 	});
 
 
 	// Sidebar widgets: channels
-	$('#channels').bind('mouseup', function(event){
+	$('#channels').bind('mouseup touchend', function(event){
 		var myId = $(this).attr('id');
 		var img_index = 0;
 
@@ -66,12 +54,12 @@ $(document).ready(function () {
 	});	
 
 	// Sidebar widgets: fantasy
-	$('#fantasy').bind('mouseup', function(event){
+	$('#fantasy').bind('mouseup touchend', function(event){
 		var myId = $(this).attr('id');
 		var img_index = 0;
 
     	var myImg = $('<img src="img/' + myId + '_' + img_index + '.png"/>')
-    				.bind('mouseup', function(){
+    				.bind('mouseup touchend', function(){
 
     					// increase step
     					// (image_index, max #steps before callback, and callback)
@@ -86,12 +74,12 @@ $(document).ready(function () {
 	});
 
 	// Sidebar widgets: views
-	$('#views').bind('mouseup', function(event){
+	$('#views').bind('mouseup touchend', function(event){
 		var myId = $(this).attr('id');
 		var img_index = 0;
 
     	var myImg = $('<img src="img/' + myId + '_' + img_index + '.png"/>')
-    				.bind('mouseup', function(){
+    				.bind('mouseup touchend', function(){
 
     					// increase step
     					// (image_index, max #steps before callback, and callback)
@@ -107,8 +95,8 @@ $(document).ready(function () {
 
 	// Chat
 	var chat_index = 0;	
-	$('#chat').bind('mouseup', function(event){
-		console.log('hey');
+	$('#chat').bind('mouseup touchend', function(event){
+		// console.log('hey');
 		var myId = $(this).attr('id');
 		chat_index = increaseSteps(chat_index, 8, function(i){});
 		var myImg = $('<img src="img/' + myId + '_' + chat_index + '.png"/>');
@@ -128,7 +116,7 @@ $(document).ready(function () {
 								'top': y
 							});
 			$(newWidget).append(img);
-			$(newWidget).bind('mousedown', function(event){
+			$(newWidget).bind('mousedown touchstart', function(event){
 				event.preventDefault();
 				// console.log('x: ' + $(this).offset().left + ', y: ' + $(this).offset().top);
 				// console.log('x: ' + event.pageX + ', y: ' + event.pageY);
@@ -148,7 +136,7 @@ $(document).ready(function () {
 					draggedObj = this;
 				}
 			});
-			$(newWidget).bind('mouseup', function(event){
+			$(newWidget).bind('mouseup touchend', function(event){
 				// console.log($(this).attr('id'));
 				if($(draggedObj).attr('id') == $(this).attr('id')){
 					draggedObj = '';	
@@ -172,7 +160,8 @@ $(document).ready(function () {
 		}
 	}
 
-	$('body').bind('mousemove', function(event){
+	$('body').bind('mousemove touchmove', function(event){
+		event.preventDefault();
 		if(draggedObj != ''){
 			$(draggedObj).css({
 				'left': event.pageX - dragOffset.x,
