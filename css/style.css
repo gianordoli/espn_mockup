@@ -93,7 +93,7 @@ img{
 
 #menu_widgets_navbar a.selected,
 #menu_widgets_navbar a:hover{  
-  background: hsla(0, 0%, 0%, 0.5);
+  background: hsla(0, 0%, 0%, 0.75);
 }
 
 #menu_widgets_content{
@@ -101,7 +101,7 @@ img{
   height: 42px;
   display: inline-block;
   vertical-align: top;  
-  background: hsla(0, 0%, 0%, 0.5);
+  background: hsla(0, 0%, 0%, 0.75);
 }
 /*--------------------------------------------*/
 
@@ -128,5 +128,5 @@ img{
 /*--------------------------------------------*/
 
 .draggable{
-  background-color: rgba(0, 0%, 0%, 0.5);
+  background-color: rgba(0, 0%, 0%, 0.75);
 }
