@@ -14,14 +14,14 @@ $(document).ready(function () {
 	$('#hamburger').bind('mouseup touchend', function(event){
 		// console.log($('#container').width());
 		// console.log($(window).width());
-		console.log($('#menu_widgets').css('right'));
-		var right = $('#menu_widgets').css('right');
-		right = (right.substring(0, right.length - 2))*1;
-		console.log(right);
-		if($('#container').offset().left < 0){
-			$('#container').animate({left: 0}, 500);	
+		// console.log($('#menu_widgets').css('right'));
+		// var right = $('#menu_widgets').css('right');
+		// right = (right.substring(0, right.length - 2))*1;
+		// console.log(right);
+		if($('#container').offset().left == 0){
+			$('#container').animate({left: $('#menu_widgets_content').width()}, 500);	
 		}else{
-			$('#container').animate({left: - $('#menu_widgets_content').width()}, 500);	
+			$('#container').animate({left: 0}, 500);
 		}
 	});
 
