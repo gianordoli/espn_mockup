@@ -1,22 +1,7 @@
 $(document).ready(function () {
 
-	// Toggle video controls
-	// Need to disable them when video is playing,
-	// otherwise all clickable elements are disabled on te iPad
-
-	function toggleVideoControls(){
-		console.log('hey');
-	  if ($("video:visible")) {
-	    if ($("video").prop("controls")) {
-	      $("video").prop("controls", false);  
-	    } else {
-	      $("video").prop("controls", true)
-	    }  
-	  }		
-	}
-	$('video').bind('play', toggleVideoControls);
-
-
+	
+	/*------------------ WIDGETS --------------------*/
 	// CSS navigation
     $('a.button').bind('mouseup', function(event){
     	var widgets = $('a.button');
@@ -33,9 +18,11 @@ $(document).ready(function () {
 		if($('#menu_widgets').offset().left == 747){
 			$('#menu_widgets').animate({left: 747 + $('#menu_widgets_content').width()}, 500);	
 			$('#chat').animate({left: 549 + $('#menu_widgets_content').width()}, 500);
+			$('.draggable').animate({left: $('.draggable').offset().left + $('#menu_widgets_content').width()}, 500);
 		}else{
 			$('#menu_widgets').animate({left: 747}, 500);
 			$('#chat').animate({left: 549}, 500);	
+			$('.draggable').animate({left: $('.draggable').offset().left - $('#menu_widgets_content').width()}, 500);
 		}
 	});
 
@@ -179,8 +166,10 @@ $(document).ready(function () {
 		}
 		return index;
 	}
+	/*-----------------------------------------------*/
 
-
+	
+	/*------------------ TIMELINE -------------------*/
 	$('#timeline_open').bind('mouseup', function(event){
 		var width = ($('#menu_timeline').width());
 		// console.log(width);
@@ -216,6 +205,25 @@ $(document).ready(function () {
 			}
 		}
 	});
+	/*-----------------------------------------------*/
+
+
+	/*-------------------- VIDEO --------------------*/
+	// Toggle video controls
+	// Need to disable them when video is playing,
+	// otherwise all clickable elements are disabled on te iPad
+
+	function toggleVideoControls(){
+		console.log('hey');
+	  if ($("video:visible")) {
+	    if ($("video").prop("controls")) {
+	      $("video").prop("controls", false);  
+	    } else {
+	      $("video").prop("controls", true)
+	    }  
+	  }		
+	}
+	$('video').bind('play', toggleVideoControls);
 
 	//THIS DOESN'T PLAY ON THE IPAD
 	$('#replay').bind('mouseup', function(event){
@@ -225,6 +233,5 @@ $(document).ready(function () {
 		$('#webkit_movie_wrapper').empty();
 		$('#webkit_movie_wrapper').append(newVideo);
 	});	
-
- 
+	/*-----------------------------------------------*/
 });
