@@ -12,12 +12,11 @@ body, html{
   font-family: 'Roboto', sans-serif;
   width: 1024px;
   height: 749px;
-<<<<<<< HEAD
   font-size: 8px;
   text-align: left;
   line-height: 0;
-  /*background: url(../img/penalty_kick.png) no-repeat left top; */
-  background: url(../img/penalty_kick.png) no-repeat center center fixed; 
+  background: url(../img/penalty_kick.png) no-repeat left top; 
+  /*background: url(../img/penalty_kick.png) no-repeat center center fixed; */
   /*-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,7 +25,6 @@ body, html{
 }
 
 /*-------- PUT ALL TAG SELECTORS HERE --------*/
-
 div{  
   border: 0;
   margin: 0;
@@ -50,34 +48,6 @@ img{
   margin: 0;
   border: 0;
   padding: 0;
-}
-
-/*--------------------------------------------*/
-
-
-/*------- PUT ALL CLASS SELECTORS HERE -------*/
-
-.menu_widgets_content{
-  width: 35px;
-  float: left;
-  display: inline-block;
-  vertical-align: top;  
-}
-
-/*--------------------------------------------*/
-
-
-/*-------- PUT ALL ID SELECTORS HERE ---------*/
-#video_background {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1000;
-  overflow: hidden;
 }
 
 #container{
@@ -167,19 +137,6 @@ img{
 .draggable{
   background-color: rgba(0, 0%, 0%, 0.75);
 }
-
-#menu_widgets{
-  width: 253px;
-  /*width: 263px;*/
-  height: 100%;
-  position: absolute;
-  right: 30px;
-}
-
-#menu_widgets button{
-  height: 35px;
-}
-/*--------------------------------------------*/
 
 /*--- Timeline ---*/
 
