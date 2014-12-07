@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+	// Toggle video controls
+	$('video').bind('play', function(){
+		console.log('hey');
+	  if ($("video:visible")) {
+	    if ($("video").prop("controls")) {
+	      $("video").prop("controls", false);  
+	    } else {
+	      $("video").prop("controls", true)
+	    }  
+	  }
+	});
+
+
 	// CSS navigation
     $('a.button').bind('mouseup touchend', function(event){
     	var widgets = $('a.button');
@@ -7,6 +20,9 @@ $(document).ready(function () {
 			$(this).removeClass('selected');
     	});
         $(this).addClass('selected');
+
+
+
     });
 
 
@@ -42,7 +58,7 @@ $(document).ready(function () {
     						var windowImg = $('<img src="img/' + myId + '_' + i + '.png"/>');
     						
     						// Creates window (x, y, w, h, id, img)
-    						createDraggableWidget(800, 400, myId + '_widget', windowImg);
+    						createDraggableWidget(549, 400, myId + '_widget', windowImg);
     					});
 
     					//Replaces the image with the next one
@@ -219,7 +235,7 @@ $(document).ready(function () {
 
 	//THIS DOESN'T PLAY ON THE IPAD
 	$('#replay').bind('mouseup', function(event){
-		$('#webkit_movie_wrapper').replaceWith('<div id="webkit_movie_wrapper"><video height="749" preload="auto" controls="controls" autoplay="true" loop="loop" src="videos/video2_1.mp4"></video>');
+		$('#webkit_movie_wrapper').replaceWith('<div id="webkit_movie_wrapper"><video  width="1332" height="749" preload="auto" controls="controls" autoplay="true" loop="loop" src="videos/video2_1.mp4"></video>');
 	});	
 
  
