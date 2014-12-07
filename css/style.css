@@ -12,12 +12,11 @@ body, html{
   font-family: 'Roboto', sans-serif;
   width: 1024px;
   height: 749px;
-<<<<<<< HEAD
   font-size: 8px;
   text-align: left;
   line-height: 0;
-  /*background: url(../img/penalty_kick.png) no-repeat left top; */
-  background: url(../img/penalty_kick.png) no-repeat center center fixed; 
+  background: url(../img/penalty_kick.png) no-repeat left top; 
+  /*background: url(../img/penalty_kick.png) no-repeat center center fixed; */
   /*-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,7 +25,6 @@ body, html{
 }
 
 /*-------- PUT ALL TAG SELECTORS HERE --------*/
-
 div{  
   border: 0;
   margin: 0;
@@ -50,34 +48,6 @@ img{
   margin: 0;
   border: 0;
   padding: 0;
-}
-
-/*--------------------------------------------*/
-
-
-/*------- PUT ALL CLASS SELECTORS HERE -------*/
-
-.menu_widgets_content{
-  width: 35px;
-  float: left;
-  display: inline-block;
-  vertical-align: top;  
-}
-
-/*--------------------------------------------*/
-
-
-/*-------- PUT ALL ID SELECTORS HERE ---------*/
-#video_background {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1000;
-  overflow: hidden;
 }
 
 #container{
@@ -167,73 +137,3 @@ img{
 .draggable{
   background-color: rgba(0, 0%, 0%, 0.75);
 }
-
-#menu_widgets{
-  width: 253px;
-  /*width: 263px;*/
-  height: 100%;
-  position: absolute;
-  right: 30px;
-}
-
-#menu_widgets button{
-  height: 35px;
-}
-/*--------------------------------------------*/
-
-/*--- Timeline ---*/
-
-#menu_score{
-  width: 249px;
-  height: 88px;
-  background: url("../img/timeline1.png") top left no-repeat;
-  position: absolute;
-  left: 30px;
-  top: 631px;
-}
-
-#menu_timelineclosed{
-  width: 70px;
-  height: 90px;
-  background: url("../img/timeline7.png") top right no-repeat; 
-  position: absolute;
-  left: 289px;
-  top: 631px; 
-}
-#timeline_open{
-  width: 23px;
-  height: 14px;
-  margin: 0 0 0 47px;
-  background: url("../img/timeline6.png") top right no-repeat;   
-}
-
-#menu_timeline{
-  width: 0px;
-  /*width: 645px;*/
-  height: 89px;
-  background: url("../img/timeline2.png") top right no-repeat; 
-  position: absolute;
-  left: 359px;
-  top: 631px; 
-}
-.width{
-  width: 160px;
-}
-#comments_open{
-  width: 0px;
-  /*width: 160px*/
-  height: 44px;
-  margin: 36px 0px 0px 0px;
-}
-#comment_bubble{
-  position: absolute;
-  left: -400px;
-  top: 501px; 
-  width: 108px;
-  height: 181px;
-/*  z-index: -1;
-*/}
-#replay{
-  width: 108px;
-  height: 108px;
-  }
