@@ -13,16 +13,28 @@ $(document).ready(function () {
 
     // Sidebar
 	$('#hamburger').bind('mouseup', function(event){
-		var right = ($(window).width() - ($('#menu_widgets').offset().left + $('#menu_widgets').width()));
-		// console.log(right);
-		console.log($('#chat'));
-		if(right == 0){
-			$('#menu_widgets').animate({right: -$('#menu_widgets').width() + $('#hamburger').width()}, 500, 'swing');
-			$('#chat').animate({right: 10}, 500);
+		// console.log($('#container').width());
+		// console.log($(window).width());
+		console.log($('#menu_widgets').css('right'));
+		var right = $('#menu_widgets').css('right');
+		right = (right.substring(0, right.length - 2))*1;
+		console.log(right);
+		if($('#container').offset().left < 0){
+			$('#container').animate({left: 0}, 500);	
 		}else{
-			$('#menu_widgets').animate({right: 0}, 500);
-			$('#chat').animate({right: $('#menu_widgets').width() + 10}, 500);
+			$('#container').animate({left: - $('#menu_widgets_content').width()}, 500);	
 		}
+		
+		// var right = ($(window).width() - ($('#menu_widgets').offset().left + $('#menu_widgets').width()));
+		// var right = - ($('#menu_widgets').offset().left + $('#menu_widgets').width()));
+		// console.log(right);
+		// if(right == 0){
+			// $('#container').animate({right: -$('#menu_widgets').width() + $('#hamburger').width()}, 500);
+			// $('#chat').animate({right: 10}, 500);
+		// }else{
+		// 	$('#container').animate({right: 0}, 500);
+			// $('#chat').animate({right: $('#menu_widgets').width() + 10}, 500);
+		// }
 	});
 
 
@@ -73,7 +85,27 @@ $(document).ready(function () {
         $('#menu_widgets_content').html(myImg);
 	});
 
-	// Chat widgets
+	// Sidebar widgets: views
+	$('#views').bind('mouseup', function(event){
+		var myId = $(this).attr('id');
+		var img_index = 0;
+
+    	var myImg = $('<img src="img/' + myId + '_' + img_index + '.svg"/>')
+    				.bind('mouseup', function(){
+
+    					// increase step
+    					// (image_index, max #steps before callback, and callback)
+    					img_index = increaseSteps(img_index, 1, function(i){});
+
+    					//Replaces the image with the next one
+    					$(this).attr('src', 'img/' + myId + '_' + img_index + '.svg');
+    				});
+
+    	// Replaces the content of the sidebar with the new img
+        $('#menu_widgets_content').html(myImg);
+	});
+
+	// Chat
 	var chat_index = 0;	
 	$('#chat').bind('mouseup', function(event){
 		console.log('hey');
