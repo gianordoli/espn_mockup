@@ -54,6 +54,26 @@ $(document).ready(function () {
         $('#menu_widgets_content').html(myImg);
 	});	
 
+	// Sidebar widgets: stats
+	$('#stats').bind('mouseup', function(event){
+		var myId = $(this).attr('id');
+		var img_index = 0;
+
+    	var myImg = $('<img src="img/' + myId + '_' + img_index + '.png"/>')
+    				.bind('mouseup', function(){
+
+    					// increase step
+    					// (image_index, max #steps before callback, and callback)
+    					img_index = increaseSteps(img_index, 4, function(i){});
+
+    					//Replaces the image with the next one
+    					$(this).attr('src', 'img/' + myId + '_' + img_index + '.png');
+    				});
+
+    	// Replaces the content of the sidebar with the new img
+        $('#menu_widgets_content').html(myImg);
+	});	
+
 	// Sidebar widgets: fantasy
 	$('#fantasy').bind('mouseup', function(event){
 		var myId = $(this).attr('id');
