@@ -15,11 +15,11 @@ $(document).ready(function () {
     // Sidebar
 	$('#hamburger').bind('mouseup', function(event){
 
-		if($('#menu_widgets').offset().left == 747){
+		if($('#menu_widgets').offset().left <= 747){
 			$('#menu_widgets').animate({left: 747 + $('#menu_widgets_content').width()}, 500);	
 			$('#chat').animate({left: 549 + $('#menu_widgets_content').width()}, 500);
 			$('.draggable').animate({left: $('.draggable').offset().left + $('#menu_widgets_content').width()}, 500);
-		}else{
+		}else if($('#menu_widgets').offset().left >= 0){
 			$('#menu_widgets').animate({left: 747}, 500);
 			$('#chat').animate({left: 549}, 500);	
 			$('.draggable').animate({left: $('.draggable').offset().left - $('#menu_widgets_content').width()}, 500);
