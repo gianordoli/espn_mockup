@@ -84,7 +84,7 @@ $(document).ready(function () {
 
     					// increase step
     					// (image_index, max #steps before callback, and callback)
-    					img_index = increaseSteps(img_index, 3, function(i){});
+    					img_index = increaseSteps(img_index, 2, function(i){});
 
     					//Replaces the image with the next one
     					$(this).attr('src', 'img/' + myId + '_' + img_index + '.png');
@@ -119,7 +119,7 @@ $(document).ready(function () {
 	$('#chat').bind('mouseup', function(event){
 		// console.log('hey');
 		var myId = $(this).attr('id');
-		chat_index = increaseSteps(chat_index, 8, function(i){});
+		chat_index = increaseSteps(chat_index, 5, function(i){});
 		var myImg = $('<img src="img/' + myId + '_' + chat_index + '.png"/>');
         $(this).html(myImg);
 	});	
